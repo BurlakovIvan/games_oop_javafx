@@ -8,15 +8,6 @@ import static org.junit.Assert.*;
 
 public class LogicTest {
 
-    @Test
-    public void moveCorrect()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
-        Logic logic = new Logic();
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        logic.add(bishopBlack);
-        logic.move(Cell.C1, Cell.H6);
-    }
-
     @Test(expected = FigureNotFoundException.class)
     public void whenMoveFigureNotFoundException()
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
